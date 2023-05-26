@@ -10,6 +10,8 @@
 
 4- Recharts -> npm i recharts
 
+5- React Route -> npm i react-router-dom
+
 ## Herramientas a utilizar 
 
 1 - Storybook -> react 16 npx -p @storybook/cli sb init 
