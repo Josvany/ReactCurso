@@ -8,6 +8,8 @@
 
 3- React Icons -> npm i react-icons
 
+4- Recharts -> npm i recharts
+
 ## Herramientas a utilizar 
 
 1 - Storybook -> react 16 npx -p @storybook/cli sb init 
