@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-const WelcomePages = props => {
+const NotFound = () => {
   return (
     <div>
-      Welcome
+      Not Found
       <div>
         <Link to="/main">Main</Link>
       </div>
@@ -12,5 +12,4 @@ const WelcomePages = props => {
   )
 }
 
-
-export default WelcomePages
+export default NotFound
