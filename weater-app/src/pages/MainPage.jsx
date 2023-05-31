@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import CityList from './../components/CityList/CityList';
 
 const MainPage = props => {
     const history = useHistory();
@@ -9,11 +10,19 @@ const MainPage = props => {
         history.push("/city");
     }
 
+    const cities = [
+        {city: "Buenos Aires", country: "Argentina"},
+        {city: "Bogotá", country: "Colombia"},
+        {city: "Madrid", country: "España"},
+        {city: "Ciudad De México", country: "México"},
+        {city: "Managua", country: "Nicaragua"}   
+]
+
     return (
         <div>
-            Main
+            <h2>Lista de ciudades</h2>
             <br />
-            <button onClick={onClickHeandler}>City</button>
+            <CityList cities={cities} onClickCity={onClickHeandler} />
         </div>
     )
 }
