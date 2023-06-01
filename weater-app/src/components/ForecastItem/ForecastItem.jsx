@@ -8,7 +8,7 @@ import  IconState, { validNamesOfIcons } from './../IconState';
 
 const ForecastItem = ({ weekDay, hour, state, temperature }) => {
   return (
-    <Grid container direction={'column'} justity={'center'} alignItems={'center'}>
+    <Grid container direction="column" justifyContent="center" alignItems="center">
         <Grid item >
             <Typography> {weekDay} </Typography>
         </Grid>
@@ -29,7 +29,7 @@ const ForecastItem = ({ weekDay, hour, state, temperature }) => {
 
 ForecastItem.propTypes = 
 {
-    weekDay: PropTypes.string.isRequired, 
+    weekDay: PropTypes.string, 
     hour: PropTypes.number.isRequired,
     state: PropTypes.oneOf(validNamesOfIcons).isRequired,
     temperature: PropTypes.number.isRequired,

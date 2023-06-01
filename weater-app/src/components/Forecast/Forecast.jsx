@@ -7,19 +7,23 @@ import { validNamesOfIcons } from '../IconState';
 
 const renderForecastItem = forecast => 
 {
-    const { hour , weekDay, state, temperature } = forecast
+    const { hour , state, temperature } = forecast
     return (
-        <Grid item key={`${weekDay}${hour}`}>
-            <ForecastItem weekDay={weekDay} hour={hour} state={state} temperature={temperature} />
+        <Grid item key={`${temperature}${hour}${state}`}>
+            <ForecastItem weekDay="Martes" hour={hour} state={state} temperature={temperature} />
         </Grid>
     )
 }
 
 const Forecast = ({ forecastItemList }) => {
+
+    let values = forecastItemList
+
   return (
-    <Grid container justifi={'center'} alignItems={'center'}>
+    <Grid container justifyContent="space-around" alignItems="center">
         {
-            forecastItemList.map(forecast => renderForecastItem(forecast))
+            
+             values.map(forecast => renderForecastItem(forecast))
         }
     </Grid>
   )
@@ -28,7 +32,7 @@ const Forecast = ({ forecastItemList }) => {
 Forecast.propTypes = 
 {
     forecastItemList: PropTypes.arrayOf(PropTypes.shape({
-        weekDay: PropTypes.string.isRequired,
+        weekDay: PropTypes.string,
         hour: PropTypes.number.isRequired,
         state: PropTypes.oneOf(validNamesOfIcons).isRequired,
         temperature: PropTypes.number.isRequired,

@@ -10,7 +10,7 @@ const renderCityAndCountry = eventonClickCity => cityAndCountry =>
 
     return ( 
             <li key={city} onClick={eventonClickCity}>
-                <Grid container justify='center' alignItems={'center'}>
+                <Grid container justifyContent='center' alignItems={'center'}>
                     <Grid item sm={8} xs={12}>
                         <CityInfo city={city} country={country} />
                     </Grid>
