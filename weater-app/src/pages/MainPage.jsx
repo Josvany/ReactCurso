@@ -1,28 +1,28 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import CityList from './../components/CityList/CityList';
+import CityList from './../components/CityList'
 
-const MainPage = props => {
-    const history = useHistory();
-
-    const onClickHeandler = () =>
-    {
-        history.push("/city");
-    }
-
-    const cities = [
-        {city: "Buenos Aires", country: "Argentina"},
-        {city: "Bogotá", country: "Colombia"},
-        {city: "Madrid", country: "España"},
-        {city: "Ciudad De México", country: "México"},
-        {city: "Managua", country: "Nicaragua"}   
+const cities = [
+    { city: "Buenos Aires", country: "Argentina"},
+    { city: "Bogotá", country: "Colombia"},
+    { city: "Madrid", country: "España"},
+    { city: "Ciudad de México", country: "México"},
 ]
+
+const MainPage = () => {
+    const history = useHistory()
+
+    const onClickHandler = () => {
+        // history.push permite alterar la URL por programación
+        history.push("/city")
+    }
 
     return (
         <div>
             <h2>Lista de ciudades</h2>
-            <br />
-            <CityList cities={cities} onClickCity={onClickHeandler} />
+            <CityList 
+                cities={cities} 
+                onClickCity={onClickHandler} />
         </div>
     )
 }

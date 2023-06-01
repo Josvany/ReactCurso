@@ -1,10 +1,10 @@
-import React from "react";
-import ForecastItem from "./ForecastItem";
+import React from 'react'
+import ForecastItem from './ForecastItem'
 
-export default
-{
+export default {
     title: "ForecastItem",
     component: ForecastItem
 }
 
-export const ForecastItemExample = () => (<ForecastItem weekDay="Lunes" hour={10} state="Sunny" temperature={30}></ForecastItem>)
+export const LunesSoleado = () => (
+    <ForecastItem hour={10} state="sunny" temperature={23} weekDay="Lunes" />)

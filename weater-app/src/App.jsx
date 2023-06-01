@@ -1,35 +1,42 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import WelcomePages from './pages/WelcomePages';
-import MainPage from './pages/MainPage';
-import CityPage from './pages/CityPage';
-import NotFound from './pages/NotFound';
-import { Grid } from '@mui/material';
-
+import { BrowserRouter as Router,
+    Switch, 
+    Route } from 'react-router-dom'
+import Grid from '@material-ui/core/Grid'
+import WelcomePage from './pages/WelcomePage'
+import MainPage from './pages/MainPage'
+import CityPage from './pages/CityPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 const App = () => {
-  return (
-    <Grid container justifyContent='center' direction={'row'}>
-      <Grid item xs={12} sm={10} md={10} lg={8}>
-        <Router>
-          <Switch>
-              <Route exact path='/'>
-                  <WelcomePages />
-              </Route>
-              <Route path='/main'>
-                  <MainPage />
-              </Route>
-              <Route path='/city'>
-                  <CityPage />
-              </Route>
-              <Route>
-                  <NotFound />
-              </Route>
-          </Switch>
-      </Router>
-      </Grid>
-    </Grid>
-  )
+    return (
+        <Grid container
+            justify="center"
+            direction="row">
+            <Grid item
+                xs={12} 
+                sm={11}
+                md={10}
+                lg={8}>
+                <Router>
+                    <Switch>
+                        <Route exact path="/">
+                            <WelcomePage />
+                        </Route>
+                        <Route path="/main">
+                            <MainPage />
+                        </Route>      
+                        <Route path="/city">
+                            <CityPage />
+                        </Route> 
+                        <Route>
+                            <NotFoundPage />
+                        </Route>                                                           
+                    </Switch>
+                </Router>
+            </Grid>
+        </Grid>
+    )
 }
 
 export default App
