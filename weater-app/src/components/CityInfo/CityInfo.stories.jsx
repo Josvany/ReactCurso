@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import 'typeface-roboto'
 import CityInfo from './CityInfo'
